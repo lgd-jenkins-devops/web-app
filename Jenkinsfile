@@ -2,7 +2,7 @@
 pipeline {
     agent any 
     environment {
-        GOOGLE_APPLICATION_CREDENTIALS = credentials('google_application_credentials')
+        GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-web-app')
         BUCKET_NAME = credentials('web-app-bucket-name')
     }
     stages {
