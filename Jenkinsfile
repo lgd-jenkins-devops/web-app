@@ -9,7 +9,7 @@ pipeline {
         stage('Update the web pages') {
             steps {
                 script {
-                    upload.uploadToBucket("index.html",env.BUCKET_NAME)
+                    upload.uploadToBucket("src/*",env.BUCKET_NAME)
                 }
             }
         }
