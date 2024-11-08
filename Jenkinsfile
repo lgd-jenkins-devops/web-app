@@ -9,7 +9,7 @@ pipeline {
         stage('Terraform Init') {
             steps {
                 script {
-                    upload("index.html",env.BUCKET_NAME)
+                    uploadToBucket("index.html",env.BUCKET_NAME)
                 }
             }
         }
