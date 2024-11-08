@@ -1,4 +1,4 @@
-@Library('gcloud-utils')
+
 pipeline {
     agent any 
     environment {
