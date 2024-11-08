@@ -6,7 +6,7 @@ pipeline {
         BUCKET_NAME = credentials('web-app-bucket-name')
     }
     stages {
-        stage('Terraform Init') {
+        stage('Update the web pages') {
             steps {
                 script {
                     upload.uploadToBucket("index.html",env.BUCKET_NAME)
