@@ -3,12 +3,13 @@ pipeline {
     agent any 
     environment {
         GOOGLE_APPLICATION_CREDENTIALS = credentials('google_application_credentials')
+        BUCKET_NAME = credentials('web-app-bucket-name')
     }
     stages {
         stage('Terraform Init') {
             steps {
                 script {
-                    sh 'echo 123'
+                    upload("index.html",$BUCKET_NAME)
                 }
             }
         }
