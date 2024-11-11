@@ -2,7 +2,7 @@
 pipeline {
     agent any 
     environment {
-        GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-web-app')
+        GOOGLE_APPLICATION_CREDENTIALS = credentials('gcp-jenkins-deploy')
         BUCKET_NAME = credentials('web-app-bucket-name')
     }
     stages {
